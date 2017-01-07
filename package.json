@@ -1,7 +1,7 @@
 {
   "name": "helper-geopattern",
   "description": "Template helper for generating a geometric SVG pattern for CSS backgrounds using btmills/geopattern",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/helpers/helper-geopattern",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "helpers/helper-geopattern",
@@ -19,6 +19,11 @@
   "scripts": {
     "test": "mocha"
   },
+  "dependencies": {
+    "camel-case": "^3.0.0",
+    "extend-shallow": "^2.0.1",
+    "geopattern": "^1.2.3"
+  },
   "devDependencies": {
     "gulp-format-md": "^0.1.11",
     "handlebars": "^4.0.6",
@@ -33,12 +38,6 @@
     "template",
     "templates"
   ],
-  "dependencies": {
-    "camel-case": "^3.0.0",
-    "extend-shallow": "^2.0.1",
-    "geopattern": "^1.2.3",
-    "isobject": "^3.0.0"
-  },
   "verb": {
     "toc": false,
     "layout": "default",
@@ -53,11 +52,11 @@
     },
     "related": {
       "list": [
-        "helper-octicon",
+        "handlebars-helpers",
         "helper-html-table",
+        "helper-octicon",
         "helper-uigradient",
-        "template-helpers",
-        "handlebars-helpers"
+        "template-helpers"
       ]
     },
     "reflinks": [
