@@ -9,10 +9,6 @@ module.exports = function(config) {
     var opts = extend({}, config, options);
     opts = extend({}, opts, opts.hash);
 
-    if (typeof generator === 'string') {
-      opts.generator = generator;
-    }
-
     if (typeof opts.generator === 'string') {
       opts.generator = camelcase(opts.generator);
     }
@@ -20,5 +16,20 @@ module.exports = function(config) {
     delete opts.data;
     delete opts.hash;
     return geo.generate(word, opts).toDataUrl();
+  };
+};
+
+module.exports.color = function(config) {
+  return function(word, options) {
+    var opts = extend({}, config, options);
+    opts = extend({}, opts, opts.hash);
+
+    if (typeof opts.generator === 'string') {
+      opts.generator = camelcase(opts.generator);
+    }
+
+    delete opts.data;
+    delete opts.hash;
+    return geo.generate(word, opts).color;
   };
 };
